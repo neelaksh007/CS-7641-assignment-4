@@ -262,6 +262,5 @@ if __name__ == '__main__':
                 print "\n\n\n"
                 dumpCSV(nIter, timing[Qname], rewards[Qname], steps[Qname],convergence[Qname], world, Qname)
     print "Wrapping up ... bbye"
-    time.sleep(1000)
     sys.exit(0)            
      
