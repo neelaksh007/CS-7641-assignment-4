@@ -190,8 +190,7 @@ if __name__ == '__main__':
                 simpleValueFunctionVis(vi, p, initialState, domain, hashingFactory, "Value Iteration {}".format(nIter))
 
         print "\n\n\n"  
-        dumpCSV(nIter, timing['Value'][1:], rewards['Value'], steps['Value'],convergence['Value'], world, 'Value')
-        print ("WAS THERE A GRAPH for VI ??")  
+        dumpCSV(nIter, timing['Value'][1:], rewards['Value'], steps['Value'],convergence['Value'], world, 'Value') 
         time.sleep(20)  
     
     pi = PolicyIteration(domain,rf,tf,discount,hashingFactory,1e-3,10, 1)  
@@ -261,13 +260,12 @@ if __name__ == '__main__':
                         #time.sleep(10)
                     #    dumpPolicyMap(MapPrinter.printPolicyMap(allStates, p, gen.getMap()),'Easy/Q/QL {} {} Iter {} Policy Map.pkl'.format(Qname,world,nIter));
                     #    break
-                    if nIter == 500:
+                    if nIter == 1000:
                         simpleValueFunctionVis(agent, p, initialState, domain, hashingFactory, "Q-Learning {}th_iter,epsilon-{},qInit-{},lr-{}".format(nIter, epsilon, qInit, lr))     
                         time.sleep(4)
                 print "\n\n\n"
                 dumpCSV(nIter, timing[Qname], rewards[Qname], steps[Qname],convergence[Qname], world, Qname)
 
     print ("My work is done Exiting..")
-    time.sleep(300)
     sys.exit(0)            
      
