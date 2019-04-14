@@ -169,7 +169,7 @@ if __name__ == '__main__':
     vi.toggleUseCachedTransitionDynamics(False)
     print "//{} Value Iteration Analysis//".format(world)
     timing['Value'].append(0) 
-    skip = False
+    skip = True
     if skip == True:   
         for nIter in iterations:      
             startTime = clock()  

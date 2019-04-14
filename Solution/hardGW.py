@@ -166,7 +166,7 @@ if __name__ == '__main__':
     vi.performReachabilityFrom(initialState)
     print "//{} Value Iteration Analysis//".format(world)
     timing['Value'].append(0)
-    skip = False
+    skip = True
     if skip == True:    
         for nIter in iterations:
             print ("Starting iteration - {}".format(nIter))      
